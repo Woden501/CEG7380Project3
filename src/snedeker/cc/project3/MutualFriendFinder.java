@@ -139,8 +139,8 @@ public class MutualFriendFinder {
 		job.setOutputFormatClass(TextOutputFormat.class);
 		//job.setNumReduceTasks(2); #set num of reducers
 		//accept the hdfs input and output directory at run time
-		FileInputFormat.addInputPath(job, new Path(args[2]));
-		FileOutputFormat.setOutputPath(job, new Path(args[3]));
+		FileInputFormat.addInputPath(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		//Launch the job and wait for it to finish
 //		job.waitForCompletion(true);
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
