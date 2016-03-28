@@ -121,7 +121,7 @@ public class MutualFriendFinder {
 	public static void main(String[] args) throws Exception {
 		//Get configuration object and set a job name
 		Configuration conf = new Configuration();
-		conf.set("mapred.textoutputformat.separator", " ");
+		conf.set("mapred.textoutputformat.separator", "");
 		Job job = new Job(conf, "mutualFriendFinder");
 		job.setJarByClass(snedeker.cc.project3.MutualFriendFinder.class);
 		
